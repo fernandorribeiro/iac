@@ -7,9 +7,7 @@
     Aplicacao Piloto
   </title>
 </head>
-<div class="header"><img src="https://salvadortradecenter.com.br/wp-content/uploads/2020/07/09-e-10-Bradesco-1.jpg" width="236" height="100"/>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+<div class="header"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Banco_Bradesco_logo_%28horizontal%29.png" width="262" height="111"/>
 </div>  
 <body>
 
