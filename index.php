@@ -9,7 +9,6 @@
 </head>
 <div class="header"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Banco_Bradesco_logo_%28horizontal%29.png" width="262" height="111"/>
 </div>  
-<p>&nbsp;</p>  
 <body>
 
  <?php
