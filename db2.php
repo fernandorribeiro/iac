@@ -1,10 +1,10 @@
 <?php
-$servername = "localhost";
-$username = "username";
-$password = "password";
+$servername = "bra-mysqlserver.mysql.database.azure.com";
+$username = "adminuser@bra-mysqlserver";
+$password = "Password123!";
 
 try {
-  $conn = new PDO("mysql:host=$servername;dbname=myDB", $username, $password);
+  $conn = new PDO("mysql:host=$servername;dbname=bra-mysqlserverdb", $username, $password);
   // set the PDO error mode to exception
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   echo "Connected successfully";
