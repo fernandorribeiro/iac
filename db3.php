@@ -3,14 +3,14 @@ $servername = "bra-mysqlserver.mysql.database.azure.com";
 $username = "adminuser@bra-mysqlserver";
 $password = "Password123!";
 $db = "bra-mysqlserverdb";
-// Create connection
-$conn = mysqli_connect($servername, $username, $password,$db);
-while(!$conn){
-  mysqli_connect($servername, $username, $password,$db);
-}    
-// Check connection
-if (!$conn) {
-   die("Connection failed: " . mysqli_connect_error());
-}
-echo "Conectado com sucesso !!!";
+try {
+   $conn = new PDO("mysql:host=$servername;dbname=myDB", $username, $password, $db);
+   // set the PDO error mode to exception
+   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+   echo "Connected successfully";
+   }
+catch(PDOException $e)
+   {
+   echo "Connection failed: " . $e->getMessage();
+   }
 ?>
