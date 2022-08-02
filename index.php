@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost";
-$username = "username";
-$password = "Password";
-$db = "dbname";
+$servername = "bra-mysqlserver.mysql.database.azure.com";
+$username = "adminuser";
+$password = "Password123!";
+$db = "bra-mysqlserverdb";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password,$db);
 // Check connection
