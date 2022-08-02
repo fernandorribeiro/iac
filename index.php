@@ -1,5 +1,5 @@
 <?php
-$servername = "";
+$servername = "localhost";
 $username = "adminuser@bra-mysqlserver";
 $password = "Password123!";
 $db = "bra-mysqlserverdb";
@@ -7,7 +7,7 @@ $db = "bra-mysqlserverdb";
 $conn = mysqli_connect($servername, $username, $password,$db);
 // Check connection
 if (!$conn) {
-   echo "Falha na conexão";
+   die("Falha de Conexão: " . mysqli_connect_error());
 }
-echo "Conectado com Sucesso";
+echo "Conectado com sucesso !!!";
 ?>
