@@ -1,6 +1,6 @@
 <?php
 $servername = "bra-mysqlserver.mysql.database.azure.com";
-$username = "adminuser";
+$username = "adminuser@bra-mysqlserver";
 $password = "Password123!";
 $db = "bra-mysqlserverdb";
 // Create connection
