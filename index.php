@@ -1,5 +1,5 @@
 <?php
-$servername = "";
+$servername = "bra-mysqlserver.mysql.database.azure.com";
 $username = "adminuser@bra-mysqlserver";
 $password = "Password123!";
 $db = "bra-mysqlserverdb";
