@@ -7,7 +7,7 @@ $db = "bra-mysqlserverdb";
 $conn = mysqli_connect($servername, $username, $password,$db);
 // Check connection
 if (!$conn) {
-   die("Connection failed: " . mysqli_connect_error());
+   die("Falha na Conexao: ";
 }
-echo "Connected successfully";
+echo "Conectado com Sucesso";
 ?>
