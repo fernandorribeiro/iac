@@ -4,10 +4,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
-    Piloto
+    Aplicacao Piloto
   </title>
 </head>
-<div class="header"><img src="https://salvadortradecenter.com.br/wp-content/uploads/2020/07/09-e-10-Bradesco-1.jpg" width="123" height="52" />
+<div class="header"><img src="https://salvadortradecenter.com.br/wp-content/uploads/2020/07/09-e-10-Bradesco-1.jpg" width="236" height="100"/>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 </div>  
