@@ -29,4 +29,3 @@ echo "Conectado com sucesso !!!";
 
 </body>
 </html>
-Footer
