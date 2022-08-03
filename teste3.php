@@ -3,14 +3,22 @@ $servername = "bra-mysqlserver.mysql.database.azure.com";
 $username = "adminuser@bra-mysqlserver";
 $password = "Password123!";
 $db = "bra-mysqlserverdb";
-// Create connection
-$conn = new mysqli_connect($servername, $username, $password,$db);
-// Check connection
+ 
+// Creating connection
+$conn = new mysqli_connect($servername, $username, $password, $db);
+ 
+// Checking connection
 if (!$conn) {
-   die("Connection failed: " . mysqli_connect_error());
+    die("Connection to the server failed: " . mysqli_connect_error());
 }
-echo "   Conectado com sucesso !!!";
-
+ 
+/* check if server is alive */
+if (mysqli_ping($conn)) {
+    printf ("Successful Connection!\n");
+} else {
+    printf ("Error: %s\n", mysqli_error($conn));
+}
+ 
+/* close connection */
 mysqli_close($conn);
-  
 ?>
