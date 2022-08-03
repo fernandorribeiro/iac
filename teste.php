@@ -1,28 +1,31 @@
-
 <?php
-
 $servername = "bra-mysqlserver.mysql.database.azure.com";
-$database = "bra-mysqlserverdb";
 $username = "adminuser@bra-mysqlserver";
 $password = "Password123!";
-$charset = "utf8mb4";
-
-try {
-
-$dsn = "mysql:host=$servername;dbname=$database;charset=$charset";
-$pdo = new PDO($dsn, $username, $password);
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-echo “Connection Okay”;
-
-return $pdo
-
+$db = "bra-mysqlserverdb";
+// Create connection
+$conn = mysqli_reconnect($servername, $username, $password,$db);
+// Check connection
+if (!$conn) {
+   die("Connection failed: " . mysqli_connect_error());
 }
+echo "   Conectado com sucesso !!!";
 
-catch (PDOException $e)
+function query($query) {
+   $connection = $conn['global_connection'];
+   if(empty($connection) || mysqli_connect_errno()) $connection = connect();
 
-{
-echo “Connection failed: ”. $e->getMessage();
+   try {
+        $result = mysqli_query($connection, $query);
+   } catch(Exception $e) {
+        if(!mysqli_ping($connection)) {
+           $connection = connect(); // reestablish the connection
+           $conn['global_connection'] = $connection; // update global connection value
+           $result = mysqli_query($connection, $query); // requery using the new connection
+        }
+   }
+
+   return $result;
 }
 
 ?>
