@@ -1,5 +1,5 @@
 <?php
-$mysqli = new mysqli("localhost", "my_user", "my_password", "world");
+$mysqli = new mysqli("bra-mysqlserver.mysql.database.azure.com", "adminuser@bra-mysqlserver", "Password123!", "bra-mysqlserverdb");
 
 /* check connection */
 if ($mysqli->connect_errno) {
