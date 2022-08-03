@@ -1,5 +1,9 @@
 <?php
+
+while(true)
+{
 $mysqli = new mysqli("bra-mysqlserver.mysql.database.azure.com", "adminuser@bra-mysqlserver", "Password123!", "bra-mysqlserverdb");
+}
 
 /* check connection */
 if ($mysqli->connect_errno) {
